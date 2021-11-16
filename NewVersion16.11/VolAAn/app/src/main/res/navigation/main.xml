@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/menuNew">
+
+    <fragment
+        android:id="@+id/menuNew"
+        android:name="com.example.volaan.fragment.New_PageFragment"
+        android:label="new_page"
+        tools:layout="@layout/fragment_new__page" />
+    <fragment
+        android:id="@+id/menuTodo"
+        android:name="com.example.volaan.fragment.To_DoFragment"
+        android:label="to_do"
+        tools:layout="@layout/fragment_to__do" />
+    <fragment
+        android:id="@+id/menuNotifications"
+        android:name="com.example.volaan.fragment.NotificationFragment"
+        android:label="notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/menuProfile"
+        android:name="com.example.volaan.fragment.ProfileFragment"
+        android:label="profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/menuSaved"
+        android:name="com.example.volaan.fragment.SavedFragment"
+        android:label="saved"
+        tools:layout="@layout/fragment_saved" />
+    <fragment
+        android:id="@+id/menuSettings"
+        android:name="com.example.volaan.fragment.SettingsFragment"
+        android:label="settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/menuMood"
+        android:name="com.example.volaan.fragment.MoodFragment"
+        android:label="fragment_mood"
+        tools:layout="@layout/fragment_mood" />
+</navigation>
