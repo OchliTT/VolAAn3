@@ -1,0 +1,66 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools" 
+    android:layout_height="match_parent"
+     android:layout_width="match_parent"
+    android:scrollbars="none"
+    >
+ 
+
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/Profile_Header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_700">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/black_border"
+            android:src="@drawable/profile_picture"
+            app:riv_oval="true" />
+
+        <TextView
+            android:id="@+id/nameProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+
+            android:layout_toRightOf="@+id/imageProfile"
+            android:text="Name" />
+
+        <TextView
+            android:id="@+id/descriptionProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameProfile"
+            android:layout_marginHorizontal="20dp"
+            android:layout_toRightOf="@+id/imageProfile"
+            android:layout_marginVertical="5dp"
+            android:text="Тут будет описание" />
+
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/postsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Profile_Header"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+</RelativeLayout>
+
+
+
+</ScrollView>
