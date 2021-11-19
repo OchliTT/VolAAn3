@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/insideLayout"
+    android:weightSum="4"
+
+    >
+
+
+        <ImageView
+            android:id = "@+id/bad"
+            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/bad"
+            android:layout_marginHorizontal="5dp"
+            android:background="@color/browser_actions_bg_grey"
+            />
+        <ImageView
+            android:id = "@+id/okay"
+            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/neutral"
+            android:layout_marginHorizontal="5dp"
+            android:background="@color/browser_actions_bg_grey"
+            />
+        <ImageView
+            android:id = "@+id/good"
+            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/good"
+            android:layout_marginHorizontal="5dp"
+            android:background="@color/browser_actions_bg_grey"
+            />
+        <ImageView
+            android:id = "@+id/excellent"
+            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/excellent"
+            android:layout_marginHorizontal="5dp"
+            android:background="@color/browser_actions_bg_grey"
+            />
+
+</LinearLayout>

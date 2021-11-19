@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="100dp"
+    android:layout_marginHorizontal="50dp"
+   android:background="@color/teal_700"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Давайте создадим новый пост! Что бы вы хотели сказать своим друзьям?"
+        android:background="@color/white"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        android:id="@+id/newPost"
+        android:background="@color/white"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:hint="Ваш текст"
+        />
+
+</LinearLayout>
