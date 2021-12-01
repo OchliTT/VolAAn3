@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "354383971067",
+    "firebase_url": "https://volaan-41af9-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "volaan-41af9",
+    "storage_bucket": "volaan-41af9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354383971067:android:43a9444072f001352a265e",
+        "android_client_info": {
+          "package_name": "com.example.volaan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "354383971067-9jt77j6bu14bfnr09nnlvd7e36sambgc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvTI-xyKHl67dwpAd3UUYLGVk2bb4IzKY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "354383971067-9jt77j6bu14bfnr09nnlvd7e36sambgc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

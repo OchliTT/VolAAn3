@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/drawable-v24/black_border.xml" value="0.22135416666666666" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.221875" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/drawable/ic_launcher_background.xml" value="0.221875" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/layout/Vova_activity_main.xml" value="0.25" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/layout/Vova_layout_task_item.xml" value="0.17806484295845998" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/layout/card_share.xml" value="0.36666666666666664" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/layout/coobchenia_ot_polzovatela.xml" value="0.1" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/layout/enter_window.xml" value="0.13425925925925927" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/layout/fragment_mood.xml" value="0.1" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/layout/fragment_new__page.xml" value="0.33" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/layout/fragment_notification.xml" value="0.23229166666666667" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/layout/fragment_profile.xml" value="0.23229166666666667" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/layout/fragment_saved.xml" value="0.23229166666666667" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/layout/fragment_settings.xml" value="0.25" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/layout/fragment_to__do.xml" value="0.36666666666666664" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/layout/layout_navigation_header.xml" value="0.23229166666666667" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/layout/main.xml" value="0.25" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/layout/new_post.xml" value="0.5" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/layout/new_task.xml" value="0.36666666666666664" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/layout/ova_layout_task_item.xml" value="0.33" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/layout/post_layout.xml" value="0.2" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/layout/register_window.xml" value="0.23229166666666667" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/layout/sfd.xml" value="0.14074074074074075" />
+        <entry key="..\:/Project/HELPMYPLSNAXYU/app/src/main/res/layout/task_layout.xml" value="0.67" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
