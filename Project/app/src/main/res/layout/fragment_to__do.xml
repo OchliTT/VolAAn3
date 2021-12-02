@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".fragment.To_DoFragment">
+    tools:context="com.example.helpmyplsnaxyu.fragment.To_DoFragment">
 
     <TextView
         android:id="@+id/tasksText"

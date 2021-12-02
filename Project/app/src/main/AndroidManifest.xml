@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VolAAn">
         <activity
-            android:name=".Main"
+            android:name="com.example.helpmyplsnaxyu.Main"
             android:exported="true"></activity>
         <activity
             android:name=".MainActivity"

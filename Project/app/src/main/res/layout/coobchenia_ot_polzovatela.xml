@@ -1,56 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="10dp"
-    tools:context=".MainActivity">
-    <TextView
-        android:id="@+id/texttitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Please enter the details below"
-        android:textSize="24dp"
-        android:layout_marginTop="20dp"
-        />
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/etName"
+        android:hint="You Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </EditText>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/bbtnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add">
+        </Button>
+        <Button
+            android:id="@+id/bbtnRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Read">
+        </Button>
+        <Button
+            android:id="@+id/bbtnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear">
+        </Button>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/postsRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="U text:"
-        android:textSize="24dp"
-        android:layout_below="@+id/texttitle"
-        android:inputType="textPersonName"/>
+        android:layout_below="@id/Prof"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-    <Button
-        android:id="@+id/btnInsert"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24dp"
-        android:text="Insert New Data"
-        android:layout_marginTop="30dp"
-        android:layout_below="@id/name"/>
-
-    <Button
-        android:id="@+id/btnUpdate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24dp"
-        android:text="Update Data"
-        android:layout_below="@id/btnInsert"/>
-    <Button
-        android:id="@+id/btnDelete"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24dp"
-        android:text="Delete Existing Data"
-        android:layout_below="@id/btnUpdate"/>
-    <Button
-        android:id="@+id/btnView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24dp"
-        android:text="View Data"
-        android:layout_below="@id/btnDelete"/>
-</RelativeLayout>
+</LinearLayout>

@@ -13,4 +13,6 @@
     <color name="yellow">#FFEB3B</color>
     <color name="green">#4CAF50</color>
     <color name="blue">#2196F3</color>
+    <color name="colorPrimaryDark">#F44336</color>
+    <color name="browser_actions_bg_grey">#A09C9C</color>
 </resources>

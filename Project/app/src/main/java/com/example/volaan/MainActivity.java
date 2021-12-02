@@ -1,22 +1,30 @@
 package com.example.volaan;
 
+import static com.google.android.gms.tasks.Tasks.await;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 
-import com.example.volaan.Models.User;
+import com.example.helpmyplsnaxyu.DBHelper;
+import com.example.helpmyplsnaxyu.Main;
+import com.example.helpmyplsnaxyu.Models.User;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.snackbar.Snackbar;
@@ -25,16 +33,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import android.database.Cursor;
-
-import android.widget.Toast;
-
-
 public class MainActivity extends AppCompatActivity {
-
-    EditText textPolzovatela, contact_lol, dob_s;
-    Button insert, update, delete, view;
-    DBHelper DB;
     Context context;
     SharedPreferences sPref;
     Button btnEnt,btnReg;
@@ -47,61 +46,31 @@ public class MainActivity extends AppCompatActivity {
     String userPass;
     String userName;
 
+    Button btnAdd, btnRead, btnClear;
+    EditText etName;
+
+    DBHelper dbHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.coobchenia_ot_polzovatela);
-        textPolzovatela = findViewById(R.id.name);
-        insert = findViewById(R.id.btnInsert);
-        update = findViewById(R.id.btnUpdate);
-        delete = findViewById(R.id.btnDelete);
-        view = findViewById(R.id.btnView);
-        DB = new DBHelper(this);
-        insert.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String nameTXT = textPolzovatela.getText().toString();
-            }
-            });
 
-        update.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String nameTXT = textPolzovatela.getText().toString();
-            }        });
-        delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String nameTXT = textPolzovatela.getText().toString();
-                Boolean checkudeletedata = DB.deletedata(nameTXT);
-                if(checkudeletedata==true)
-                    Toast.makeText(MainActivity.this, "Entry Deleted", Toast.LENGTH_SHORT).show();
-                else
-                    Toast.makeText(MainActivity.this, "Entry Not Deleted", Toast.LENGTH_SHORT).show();
-            }        });
+        btnAdd = (Button) findViewById(R.id.btnAdd);
+        btnAdd.setOnClickListener((View.OnClickListener) this);
+
+        btnRead = (Button) findViewById(R.id.btnRead);
+        btnRead.setOnClickListener((View.OnClickListener) this);
+
+        btnClear = (Button) findViewById(R.id.btnClear);
+        btnClear.setOnClickListener((View.OnClickListener) this);
+
+        etName = (EditText) findViewById(R.id.etName);
+
+        dbHelper = new DBHelper(this);
 
 
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Cursor res = DB.getdata();
-                if(res.getCount()==0){
-                    Toast.makeText(MainActivity.this, "No Entry Exists", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                StringBuffer buffer = new StringBuffer();
-                while(res.moveToNext()){
-                    buffer.append("Name :"+res.getString(0)+"\n");
-                }
-
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setCancelable(true);
-                builder.setTitle("User Entries");
-                builder.setMessage(buffer.toString());
-                builder.show();
-            }        });
         setContentView(R.layout.activity_main);
         context = getApplicationContext();
         sPref = context.getSharedPreferences("Auth", context.MODE_PRIVATE);
@@ -256,6 +225,47 @@ public class MainActivity extends AppCompatActivity {
         });
         dialog.show();
     }
+
+
+    public void onClick(View v) {
+
+        String name = etName.getText().toString();
+
+        SQLiteDatabase database = dbHelper.getWritableDatabase();
+
+        ContentValues contentValues = new ContentValues();
+
+
+        switch (v.getId()) {
+
+            case R.id.btnAdd:
+                contentValues.put(DBHelper.KEY_NAME, name);
+
+                database.insert(DBHelper.TABLE_CONTACTS, null, contentValues);
+                break;
+
+            case R.id.btnRead:
+                Cursor cursor = database.query(DBHelper.TABLE_CONTACTS, null, null, null, null, null, null);
+
+                if (cursor.moveToFirst()) {
+                    int idIndex = cursor.getColumnIndex(DBHelper.KEY_ID);
+                    int nameIndex = cursor.getColumnIndex(DBHelper.KEY_NAME);
+                    do {
+                        Log.d("mLog", "ID = " + cursor.getInt(idIndex) + ", name = " + cursor.getString(nameIndex));
+                    } while (cursor.moveToNext());
+                } else
+                    Log.d("mLog", "0 rows");
+
+                cursor.close();
+                break;
+
+            case R.id.btnClear:
+                database.delete(DBHelper.TABLE_CONTACTS, null, null);
+                break;
+        }
+        dbHelper.close();
+    }
+
     private void saveText(String name, String value)
     {
         SharedPreferences.Editor ed =sPref.edit();
